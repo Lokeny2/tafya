@@ -3,4 +3,6 @@ export type Topic = {
   title: string;
   summary: string;
   body: string;
+  category: string;
+  tips: string[];
 };
