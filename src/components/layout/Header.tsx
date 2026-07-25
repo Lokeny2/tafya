@@ -6,6 +6,7 @@ import Link from "next/link";
 const navLinks = [
   { href: "/conditions", label: "Health A-Z" },
   { href: "/healthy-living", label: "Healthy Living" },
+  { href: "/symptom-checker", label: "Symptom Checker" },
   { href: "/about", label: "About" },
 ];
 

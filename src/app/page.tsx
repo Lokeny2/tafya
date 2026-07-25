@@ -74,6 +74,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Symptom checker callout */}
+<section className="border-t border-line bg-brand-50">
+  <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+    <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <h2 className="font-heading text-xl font-semibold text-ink">
+          Not sure what's wrong?
+        </h2>
+        <p className="mt-1 text-sm text-subtle">
+          Answer a few questions and get general guidance on your next step.
+        </p>
+      </div>
+      <Link
+        href="/symptom-checker"
+        className="shrink-0 rounded-md bg-brand-600 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-700"
+      >
+        Try the symptom checker
+      </Link>
+    </div>
+  </div>
+</section>
+
       {/* Section CTAs */}
       <section className="border-t border-line">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
