@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/healthy-living", label: "Healthy Living" },
   { href: "/symptom-checker", label: "Symptom Checker" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
