@@ -167,7 +167,7 @@ export default function SymptomCheckerPage() {
                     onClick={() =>
                       dispatch({ type: "CHOOSE", next: choice.next })
                     }
-                    className="w-full rounded-lg border border-line bg-surface px-5 py-4 text-left text-sm font-medium text-ink transition-colors hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700"
+                    className="w-full rounded-lg border border-line bg-surface px-5 py-4 text-left text-sm font-medium text-ink transition-colors hover:border-brand-600 hover:bg-brand-50 hover:text-brand-800"
                   >
                     {choice.label}
                   </button>

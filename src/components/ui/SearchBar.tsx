@@ -139,7 +139,7 @@ export default function SearchBar() {
                               {condition.summary}
                             </p>
                           </div>
-                          <span className="ml-auto shrink-0 rounded-full bg-brand-100 px-2 py-0.5 text-xs text-brand-700">
+                          <span className="ml-auto shrink-0 rounded-full bg-brand-100 px-2 py-0.5 text-xs text-brand-800">
                             {condition.category}
                           </span>
                         </Link>
@@ -170,7 +170,7 @@ export default function SearchBar() {
                               {topic.summary}
                             </p>
                           </div>
-                          <span className="ml-auto shrink-0 rounded-full bg-brand-100 px-2 py-0.5 text-xs text-brand-700">
+                          <span className="ml-auto shrink-0 rounded-full bg-brand-100 px-2 py-0.5 text-xs text-brand-800">
                             {topic.category}
                           </span>
                         </Link>

@@ -27,7 +27,7 @@ export default async function TopicDetailPage({
       <Link href="/healthy-living" className="text-sm font-medium text-brand-600 hover:underline">
         ← Back to Healthy Living
       </Link>
-      <span className="mt-4 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-medium text-brand-700">
+      <span className="mt-4 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-medium text-brand-800">
         {topic.category}
       </span>
       <h1 className="mt-3 font-heading text-3xl font-semibold text-ink sm:text-4xl">

@@ -35,7 +35,7 @@ export default async function HealthyLivingPage() {
                 <span className="font-heading font-medium text-ink">{topic.title}</span>
                 <p className="mt-1 text-sm text-subtle">{topic.summary}</p>
               </div>
-              <span className="shrink-0 rounded-full bg-brand-100 px-3 py-1 text-xs font-medium text-brand-700">
+              <span className="shrink-0 rounded-full bg-brand-100 px-3 py-1 text-xs font-medium ">
                 {topic.category}
               </span>
             </Link>

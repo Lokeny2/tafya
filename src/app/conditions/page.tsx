@@ -87,7 +87,7 @@ export default async function ConditionsPage({
                   </span>
                   <p className="mt-1 text-sm text-subtle">{condition.summary}</p>
                 </div>
-                <span className="shrink-0 rounded-full bg-brand-100 px-3 py-1 text-xs font-medium text-brand-700">
+                <span className="shrink-0 rounded-full bg-brand-100 px-3 py-1 text-xs font-medium ">
                   {condition.category}
                 </span>
               </Link>

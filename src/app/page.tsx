@@ -63,7 +63,7 @@ export default function Home() {
             <Link
               key={link.href}
               href={link.href}
-              className="flex items-center gap-3 rounded-lg border border-line bg-surface px-4 py-4 text-sm font-medium text-ink transition-colors hover:bg-surface-alt hover:text-brand-700"
+              className="flex items-center gap-3 rounded-lg border border-line bg-surface px-4 py-4 text-sm font-medium text-ink transition-colors hover:bg-surface-alt hover:text-brand-800"
             >
               <span className="text-xl" aria-hidden="true">
                 {link.icon}
