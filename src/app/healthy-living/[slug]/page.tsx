@@ -25,8 +25,8 @@ export default async function TopicDetailPage({
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
       <Link href="/healthy-living" className="text-sm font-medium text-brand-600 hover:underline">
-        ← Back to Healthy Living
-      </Link>
+  <span aria-hidden="true">←</span> Back to Healthy Living
+</Link>
       <span className="mt-4 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-medium text-brand-800">
         {topic.category}
       </span>

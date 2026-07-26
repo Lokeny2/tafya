@@ -38,8 +38,8 @@ export default async function ConditionDetailPage({
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-      <Link href="/conditions" className="text-sm font-medium text-brand-600 hover:underline">
-        ← Back to Health A–Z
+      <Link href="/conditions" className="text-sm font-medium text-brand-800 hover:underline">
+            <span aria-hidden="true">←</span> Back to Health A–Z
       </Link>
       <span className="mt-4 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-medium text-brand-800">
         {condition.category}

@@ -88,7 +88,7 @@ export default function Home() {
       </div>
       <Link
         href="/symptom-checker"
-        className="shrink-0 rounded-md bg-brand-600 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-700"
+        className="shrink-0 rounded-md bg-brand-700 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-700"
       >
         Try the symptom checker
       </Link>
@@ -109,7 +109,7 @@ export default function Home() {
               </p>
               <Link
                 href="/conditions"
-                className="mt-4 inline-block text-sm font-medium text-brand-600 hover:underline"
+                className="mt-4 inline-block text-sm font-medium text-brand-800 hover:underline"
               >
                 Browse conditions →
               </Link>
@@ -123,7 +123,7 @@ export default function Home() {
               </p>
               <Link
                 href="/healthy-living"
-                className="mt-4 inline-block text-sm font-medium text-brand-600 hover:underline"
+                className="mt-4 inline-block text-sm font-medium text-brand-800 hover:underline"
               >
                 Explore topics →
               </Link>
