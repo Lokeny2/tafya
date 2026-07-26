@@ -43,7 +43,7 @@ export default function Home() {
           <h1 className="font-heading text-4xl font-semibold text-ink sm:text-5xl">
             Health information you can trust.
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-subtle">
+          <p className="mt-4 max-w-xl text-lg text-subtle-on-teal">
             Tafya helps you understand symptoms, conditions, and how to look
             after your health — clearly explained, in one place.
           </p>
@@ -82,7 +82,7 @@ export default function Home() {
         <h2 className="font-heading text-xl font-semibold text-ink">
           Not sure what's wrong?
         </h2>
-        <p className="mt-1 text-sm text-subtle">
+        <p className="mt-1 text-sm text-subtle-on-teal">
           Answer a few questions and get general guidance on your next step.
         </p>
       </div>

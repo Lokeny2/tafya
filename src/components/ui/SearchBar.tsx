@@ -86,16 +86,19 @@ export default function SearchBar() {
           />
         </svg>
         <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={(e) => e.key === "Escape" && setIsOpen(false)}
-          placeholder="Search conditions, symptoms, topics…"
-          aria-label="Search Tafya"
-          aria-expanded={isOpen}
-          aria-autocomplete="list"
-          className="w-full rounded-lg border border-line bg-surface py-3 pl-9 pr-4 text-sm text-ink placeholder:text-subtle focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20"
-        />
+  type="search"
+  role="combobox"
+  value={query}
+  onChange={(e) => setQuery(e.target.value)}
+  onKeyDown={(e) => e.key === "Escape" && setIsOpen(false)}
+  placeholder="Search conditions, symptoms, topics…"
+  aria-label="Search Tafya"
+  aria-expanded={isOpen}
+  aria-autocomplete="list"
+  aria-controls="search-listbox"
+  className="w-full rounded-lg border border-line bg-surface py-3 pl-9 pr-4 text-sm text-ink placeholder:text-subtle focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20"
+/>
+
         {isLoading && (
           <div className="absolute right-3 top-1/2 -translate-y-1/2">
             <div className="h-4 w-4 animate-spin rounded-full border-2 border-line border-t-brand-600" />
@@ -105,6 +108,7 @@ export default function SearchBar() {
 
       {isOpen && (
         <div
+          id="search-listbox"
           role="listbox"
           className="absolute z-50 mt-1 w-full rounded-lg border border-line bg-surface shadow-lg"
         >
