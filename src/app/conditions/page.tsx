@@ -1,6 +1,13 @@
 import Link from "next/link";
 import type { Condition } from "@/types/condition";
 import type { ConditionCategory } from "@/types/condition";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Health A–Z | Tafya",
+  description:
+    "Browse all health conditions on Tafya, filtered by category. Clear, simple explanations of symptoms, causes, and self-care.",
+};
 
 const categories: ConditionCategory[] = [
   "Cold & Flu",

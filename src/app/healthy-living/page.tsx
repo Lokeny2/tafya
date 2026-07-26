@@ -1,5 +1,12 @@
 import Link from "next/link";
 import type { Topic } from "@/types/topic";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Healthy Living | Tafya",
+  description:
+    "Practical guidance on staying active, eating well, managing stress, sleep, and more.",
+};
 
 async function getTopics(): Promise<Topic[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/healthy-living`, {

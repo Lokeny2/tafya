@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/conditions", label: "Health A-Z" },
@@ -13,6 +14,7 @@ const navLinks = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="border-b border-line bg-surface">
@@ -27,13 +29,22 @@ export default function Header() {
 
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex gap-x-6 text-sm font-medium text-ink">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="transition-colors hover:text-brand-600">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname.startsWith(link.href);
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`transition-colors hover:text-brand-600 ${
+                      isActive ? "text-brand-600" : "text-ink"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -59,18 +70,24 @@ export default function Header() {
 
       {isOpen && (
         <nav id="mobile-nav" aria-label="Primary" className="border-t border-line md:hidden">
-          <ul className="flex flex-col gap-1 px-4 py-3 text-sm font-medium text-ink sm:px-6">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="block rounded-md px-2 py-2 transition-colors hover:bg-surface-alt hover:text-brand-600"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+          <ul className="flex flex-col gap-1 px-4 py-3 text-sm font-medium sm:px-6">
+            {navLinks.map((link) => {
+              const isActive = pathname.startsWith(link.href);
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`block rounded-md px-2 py-2 transition-colors hover:bg-surface-alt hover:text-brand-600 ${
+                      isActive ? "text-brand-600" : "text-ink"
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       )}
