@@ -1,5 +1,4 @@
-import { connectToDatabase } from "@/lib/mongodb";
-import { TopicModel } from "@/lib/models/Topic";
+import { getTopicBySlug } from "@/lib/queries";
 import { okResponse, errorResponse } from "@/lib/apiResponse";
 
 export async function GET(
@@ -7,14 +6,9 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    await connectToDatabase();
     const { slug } = await params;
-    const topic = await TopicModel.findOne({ slug }).lean();
-
-    if (!topic) {
-      return errorResponse("Topic not found", 404);
-    }
-
+    const topic = await getTopicBySlug(slug);
+    if (!topic) return errorResponse("Topic not found", 404);
     return okResponse(topic);
   } catch (error) {
     console.error(error);
