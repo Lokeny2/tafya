@@ -6,7 +6,16 @@ export type ConditionCategory =
   | "Aches & Pains"
   | "Allergies"
   | "Eye"
-  | "Urinary";
+  | "Urinary"
+  | "Respiratory"
+  | "Heart & Circulatory"
+  | "Ear, Nose & Throat"
+  | "Neurological"
+  | "Infectious Diseases"
+  | "Bone & Joint"
+  | "Endocrine & Metabolic"
+  | "Women's Health"
+  | "Men's Health";
 
 export type Condition = {
   slug: string;
