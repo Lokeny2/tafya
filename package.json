@@ -23,6 +23,7 @@
     "use-debounce": "^10.1.1"
   },
   "devDependencies": {
+    "@sanity/client": "^7.25.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
