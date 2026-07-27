@@ -15,7 +15,12 @@ export type ConditionCategory =
   | "Bone & Joint"
   | "Endocrine & Metabolic"
   | "Women's Health"
-  | "Men's Health";
+  | "Men's Health"
+  | "Children's Health"
+  | "Sexual Health"
+  | "Dental"
+  | "First Aid"
+  | "Cancer Symptom Awareness";
 
 export type Condition = {
   slug: string;

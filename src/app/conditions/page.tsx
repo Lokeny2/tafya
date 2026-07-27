@@ -27,6 +27,11 @@ const categories: ConditionCategory[] = [
   "Endocrine & Metabolic",
   "Women's Health",
   "Men's Health",
+  "Children's Health",
+  "Sexual Health",
+  "Dental",
+  "First Aid",
+  "Cancer Symptom Awareness",
 ];
 
 async function getConditions(category?: string): Promise<Condition[]> {
