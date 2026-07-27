@@ -4,7 +4,9 @@ export type ConditionCategory =
   | "Skin"
   | "Mental Wellbeing"
   | "Aches & Pains"
-  | "Allergies";
+  | "Allergies"
+  | "Eye"
+  | "Urinary";
 
 export type Condition = {
   slug: string;
