@@ -26,15 +26,26 @@
   --font-heading: var(--font-lexend), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Ensure visible focus rings for keyboard navigation */
-*:focus-visible {
-  outline: 2px solid var(--color-brand-600) !important;
-  outline-offset: 2px;
-  border-radius: 4px;
+/* Dark mode token overrides */
+.dark {
+  --color-ink: #f1f5f9;
+  --color-subtle: #94a3b8;
+  --color-subtle-on-teal: #cbd5e1;
+  --color-surface: #0f172a;
+  --color-surface-alt: #1e293b;
+  --color-line: #334155;
+  --color-brand-50: #0f2d28;
+  --color-brand-100: #134e45;
 }
 
 body {
   background-color: var(--color-surface);
   color: var(--color-ink);
   font-family: var(--font-sans);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-brand-600) !important;
+  outline-offset: 2px;
+  border-radius: 4px;
 }

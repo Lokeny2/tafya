@@ -23,16 +23,35 @@ export const metadata: Metadata = {
     "Tafya is a student portfolio project simulating a public health information platform.",
 };
 
+const themeScript = `
+  (function() {
+    try {
+      var stored = localStorage.getItem('tafya-theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch(e) {}
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${lexend.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${lexend.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="flex min-h-screen flex-col antialiased">
-        
-        <a href="#main-content"
+        <a
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-white"
         >
           Skip to main content
